@@ -1,0 +1,31 @@
+env:
+  NODE_VERSION: "10.18"
+
+steps:
+  - label: ":hammer: Build and Test"
+    command:
+      - npm install
+      - npm test
+    plugins:
+      - docker-login#v2.0.1:
+          username: localzservice
+          password-env: DOCKER_LOGIN_PASSWORD
+      - docker#v3.5.0:
+          image: localz/buildkite-node:${NODE_VERSION}
+
+  - wait
+
+  - label: ":cloud: Publish"
+    if: build.tag != null
+    commands:
+      - npm config set "//registry.npmjs.org/:_authToken" $${NPM_TOKEN}
+      - npm install
+      - npm publish --public access
+    plugins:
+      - docker-login#v2.0.1:
+          username: localzservice
+          password-env: DOCKER_LOGIN_PASSWORD
+      - docker#v3.5.0:
+          image: localz/buildkite-node:${NODE_VERSION}
+          environment:
+            - NPM_TOKEN
