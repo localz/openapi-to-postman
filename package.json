@@ -1,6 +1,6 @@
 {
   "name": "@localz/openapi-to-postmanv2",
-  "version": "1.2.7",
+  "version": "1.2.14",
   "description": "Convert a given OpenAPI specification to Postman Collection v2.0",
   "homepage": "https://github.com/localz/openapi-to-postman",
   "bugs": "https://github.com/localz/openapi-to-postman/issues",
