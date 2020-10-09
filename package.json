@@ -2,11 +2,11 @@
   "name": "@localz/openapi-to-postmanv2",
   "version": "1.2.7",
   "description": "Convert a given OpenAPI specification to Postman Collection v2.0",
-  "homepage": "https://github.com/postmanlabs/openapi-to-postman",
-  "bugs": "https://github.com/postmanlabs/openapi-to-postman/issues",
+  "homepage": "https://github.com/localz/openapi-to-postman",
+  "bugs": "https://github.com/localz/openapi-to-postman/issues",
   "repository": {
     "type": "git",
-    "url": "git://github.com/postmanlabs/openapi-to-postman.git"
+    "url": "git://github.com/localz/openapi-to-postman.git"
   },
   "keywords": [
     "openapi",
