@@ -20,7 +20,7 @@ steps:
     commands:
       - npm config set "//registry.npmjs.org/:_authToken" $${NPM_TOKEN}
       - npm install
-      - npm publish --access public
+      - npm publish
     plugins:
       - docker-login#v2.0.1:
           username: localzservice
